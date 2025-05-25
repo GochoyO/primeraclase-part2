@@ -2,7 +2,9 @@ const form = document.querySelector("#formulario");
 const input = document.querySelector("#tarea");
 const lista = document.querySelector("#lista");
 const mensaje = document.querySelector("#mensaje");
-const botonAdd = document.querySelector("button");
+const botonAdd = document.querySelector("#agregar");
+
+//const fondoOriginal = document.body.style.backgroundColor.
 
 // crear un elemento boton limpiar y agregarlo en el html
 
@@ -31,11 +33,12 @@ botonlimpiar.addEventListener("click", (e) => {
     return;
 
 });
+
 // funcion arrow evento change variable de entradar
 
 input.addEventListener("change", (e) => {
 
-    console.log("HOLA YO . onchange");
+    console.log("HOLA YO/MI . onchange");
 
     botonAdd.style.backgroundColor="SpringGreen";
     botonAdd.style.color="black";
@@ -66,6 +69,7 @@ botonAddtonAdd.addEventListener("mouseover", (e) => {
 
 botonAdd.addEventListener("click", (e) => {
 
+    console.log("HOLA YO/MI . click");
     e.preventDefault(); //Previene la actualizacion de la pagina cada que hago un submit
 
     botonAdd.style.backgroundColor="red";
@@ -84,14 +88,49 @@ botonAdd.addEventListener("click", (e) => {
     else{
         tareaOk();
  
-    //
+//Crear elemento a partir de la variable text y agregarlo a la lista
+// style="width: ${200}px; height: ${70}px;"
 
         const li = document.createElement("li");
 
             li.innerHTML = `${text} <button class=\"eliminar\">Eliminar</button>`;
             lista.appendChild(li);
-
             input.value = "";
+
+        //querySelector inicializar listas de tareas
+
+        const tareasAdd = document.querySelectorAll("li");
+
+console.log("tareasAdd : ",tareasAdd);  
+console.log("tareasAdd antes: ",tareasAdd);  
+
+
+    tareasAdd.forEach((tarea, index) => {
+
+        console.log("Antes de eliminar - tarea: " , tarea);
+        console.log("Antes de eliminar - index: " , index);
+
+        const botonEliminar = tarea.querySelector(".eliminar");
+
+        botonEliminar.addEventListener("click", ()  => {
+            lista.removeChild(tarea);
+
+            const p = document.createElement("p");
+            p.innerHTML = 'Tarea se elimino correctamente';
+            
+   
+
+    });
+});
+/*
+const node = document.getElementById("child");
+if (node.parentNode) {
+  node.parentNode.removeChild(node);
+}
+*/
+
+//***Fin Aqui ---------------------------------------------------------------------***
+
 
 // Agregar estilo al formulario cuando se agrega una tarea
 
@@ -101,7 +140,8 @@ botonAdd.addEventListener("click", (e) => {
             cuerpo.style.backgroundColor="#eaf323";      /*color amarillento*/ 
 
     };
-});
+}); 
+
 
 // APARTADO FUNCIONES
 
@@ -146,5 +186,5 @@ function estiloBotones(){
     botonAdd.style.borderRadius="15px";
     botonAdd.style.marginRight= "60px";
     botonAdd.style.cursor= "pointer";
-    
+
 }

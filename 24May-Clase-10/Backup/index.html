@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lista interactiva</title>
+
+
+    <style>
+        #mensaje{
+            text-align: center;
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 15px;
+            margin-left: 120px;
+        }
+        body{
+            background-color: lightblue;
+            height: 40px;
+
+        }
+
+    </style>
+</head>
+<body class="cuerpo">
+    
+    <h1>Lista de tareas</h1>
+    <div class="Cuadro">
+    <form id="formulario">
+        <label for="tarea">Escribe una tarea</label>
+        <input type="text" name="tarea" id="tarea">
+
+        <button id="agregar">Agregar tarea</button>
+    </form>
+    <p id="mensaje"></p>
+
+    <ul id="lista"></ul>
+
+    <script src="./main.js"></script>
+</body>
+</html>
