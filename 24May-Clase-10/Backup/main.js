@@ -101,10 +101,6 @@ botonAdd.addEventListener("click", (e) => {
 
         const tareasAdd = document.querySelectorAll("li");
 
-console.log("tareasAdd : ",tareasAdd);  
-console.log("tareasAdd antes: ",tareasAdd);  
-
-
     tareasAdd.forEach((tarea, index) => {
 
         console.log("Antes de eliminar - tarea: " , tarea);
@@ -113,6 +109,10 @@ console.log("tareasAdd antes: ",tareasAdd);
         const botonEliminar = tarea.querySelector(".eliminar");
 
         botonEliminar.addEventListener("click", ()  => {
+
+            console.log("1.-tarea eliminada");
+            console.log("1.-tarea eliminada - tarea: " , tarea);
+       
             lista.removeChild(tarea);
 
             const p = document.createElement("p");
