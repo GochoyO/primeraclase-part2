@@ -58,8 +58,7 @@ botonlimpiar.addEventListener("mouseover", () => {
 botonlimpiar.addEventListener("mouseout", () => {
     estiloBotonLimpiar();
     estiloBotonesAdd();
-    console.log("Paso...1....botonlimpiar    -   mouseout");
-
+ //   console.log("Paso...1....botonlimpiar    -   mouseout")
 });
 
 botonAdd.addEventListener("mouseout", () => {
