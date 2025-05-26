@@ -107,22 +107,17 @@ botonAdd.addEventListener("click", (e) => {
 // Estructura de control para Eliminar tarea
     tareasAdd.forEach((tarea, indice) => {
         const botonEliminar = tarea.querySelector(".eliminar");
-    //estilo
+        //estilo
         botonEliminar.style.cursor= "pointer";
 
+        //  botonEliminar.addEventListener("click", ()  => {        
         botonEliminar.addEventListener("click", ()  => {        
-
-            console.log("lista de tareas: ", lista);
-            console.log("indice: ", lista[indice]);
-
-           let valor = localStorage.getItem(tarea[indice]);
-
-           console.log("valor a eliminar...: ", valor);
-           localStorage.removeItem(valor);
-           lista.removeChild(tarea);
+            let valor = tarea.innerText.replace("Eliminar", "").trim();
+        console.log("Eliminando tarea........:", valor);
+            localStorage.removeItem(valor);
+            lista.removeChild(tarea);
         });
-});
-
+    });                  //fin forEach       
 /***    Fin Aqui    ***/
 
 // Cambiar estilo al formulario cuando se agregan las tareas
