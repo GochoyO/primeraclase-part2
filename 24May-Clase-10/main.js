@@ -109,13 +109,14 @@ botonAdd.addEventListener("click", (e) => {
         const botonEliminar = tarea.querySelector(".eliminar");
         //estilo
         botonEliminar.style.cursor= "pointer";
-
-        //  botonEliminar.addEventListener("click", ()  => {        
-        botonEliminar.addEventListener("click", ()  => {        
+      
+          botonEliminar.addEventListener("click", ()  => {        
             let valor = tarea.innerText.replace("Eliminar", "").trim();
-        console.log("Eliminando tarea........:", valor);
+               console.log("Eliminando tarea........:", valor);
             localStorage.removeItem(valor);
-            lista.removeChild(tarea);
+
+            tarea.remove();
+    
         });
     });                  //fin forEach       
 /***    Fin Aqui    ***/
