@@ -20,7 +20,7 @@ Clase 10 - ARREGLOS - LOCALSTORAGE
 
 Practica: En la actividad "Lista de Tareas" de la clase 10, se agregaron los siguientes cambios:
 
-	- Para el boton "Eliminar" de la lista de tareas se creo un evento y aplico la arreglo con forEach" para eliminar la tarea y localStore agregar y eliminar.
+	- Para el boton "Eliminar" de la lista de tareas se creo un evento y aplico la arreglo con forEach" para eliminar la tarea y localStorage donde se almacenan las tareas y se eliminan.
 
 	- Se ajusto estilo de los botones.
 	- Se agrego boton limpiar.
