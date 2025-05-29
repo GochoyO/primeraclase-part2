@@ -289,7 +289,7 @@ span{
 }
 
 
-h1{
+#formh1{
 	font-size: 39px;  
 	text-align: letf; 
 	padding-bottom: 20px; 
@@ -297,14 +297,14 @@ h1{
 }
 
 
-h3{
+#formh3{
 	font-size: 16px; 
 	padding-bottom: 30px;
 	color: #0e0e0e;   
 }
 
 
-p{
+#formp{
 	font-size: 14px; 
 	color: #0e0e0e; 
 }
@@ -329,6 +329,66 @@ p{
 .formulario textarea:focus{
 	outline:0;
 	border: 1px solid #97d848;
+}
+
+/***pedales***/
+
+.headerpedales{
+  /*  display: flex;
+    position: sticky;
+    justify-content: space-between;*/
+    width: 100%;
+    height: 130px;
+    align-items: center;
+    background-color: rgb(16, 2, 66);
+    color:white;
+    font-size: 40px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.pedalesProy{
+
+    justify-content: space-around;
+    gap:160px;
+    align-items: center;
+    text-align: center; 
+    align-items: center;
+    margin: 0;
+}
+
+.pedales img{
+    width: 800px;
+    height:auto;
+    padding-left: 40px;
+
+}
+
+
+.campoProy{
+
+    justify-content: space-around;
+    gap:160px;
+    align-items: center;
+    text-align: center; 
+    align-items: center;
+    margin: 0;
+}
+
+.campo img{
+    width: 800px;
+    height:auto;
+    padding-left: 40px;
+
+}
+#pie{
+    padding: 5px;
+    text-align: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #d9e62f;
+    font-family: 'Segoe UI';
+    
 }
 
 
